@@ -368,31 +368,31 @@
         }
         /* NEW CATEGORIES COLORS */
         .health-tools .category-title { 
-            color: #d32f2f !important;
+            color: #d32f2f !important; /* Red for health */
             font-size: 2.5rem !important;
             font-weight: 800 !important;
             margin: 0 !important;
         }
         .education-tools .category-title { 
-            color: #1976d2 !important;
+            color: #1976d2 !important; /* Blue for education */
             font-size: 2.5rem !important;
             font-weight: 800 !important;
             margin: 0 !important;
         }
         .travel-tools .category-title { 
-            color: #388e3c !important;
+            color: #388e3c !important; /* Green for travel */
             font-size: 2.5rem !important;
             font-weight: 800 !important;
             margin: 0 !important;
         }
         .food-tools .category-title { 
-            color: #f57c00 !important;
+            color: #f57c00 !important; /* Orange for food */
             font-size: 2.5rem !important;
             font-weight: 800 !important;
             margin: 0 !important;
         }
         .productivity-tools .category-title { 
-            color: #7b1fa2 !important;
+            color: #7b1fa2 !important; /* Purple for productivity */
             font-size: 2.5rem !important;
             font-weight: 800 !important;
             margin: 0 !important;
@@ -741,31 +741,6 @@
             cursor: not-allowed;
             transform: none;
             box-shadow: none;
-        }
-
-        /* Typing Indicator */
-        .typing-indicator {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-        }
-        
-        .typing-indicator span {
-            height: 8px;
-            width: 8px;
-            background: #4a6cf7;
-            border-radius: 50%;
-            margin: 0 2px;
-            animation: typing 1.4s infinite ease-in-out;
-        }
-        
-        .typing-indicator span:nth-child(1) { animation-delay: 0s; }
-        .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
-        .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
-        
-        @keyframes typing {
-            0%, 60%, 100% { transform: translateY(0); }
-            30% { transform: translateY(-10px); }
         }
 
         /* No Results */
@@ -1455,7 +1430,17 @@
             </div>
             
             <div class="chatbot-body" id="chatbotMessages">
-                <!-- Messages will appear here -->
+                <div class="chatbot-message bot">
+                    Hello! 👋 I'm QSHUB Assistant. How can I help you today?
+                </div>
+                <div class="chatbot-message bot">
+                    You can ask me about:
+                    <br>• Available tools and features
+                    <br>• How to use specific tools
+                    <br>• Tool recommendations
+                    <br>• Technical support
+                    <br>• Website navigation
+                </div>
             </div>
             
             <div class="chatbot-input-container">
@@ -1533,7 +1518,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // QSHUB Tools Data - EXTENDED VERSION (228 Tools)
+        // QSHUB Tools Data - WITH ACTIVE LINKS
         const toolsData = [
             {
                 category: "Image Tools",
@@ -1541,18 +1526,18 @@
                 categoryDesc: "Transform, optimize, and edit images with our comprehensive image tools.",
                 categoryClass: "image-tools",
                 tools: [
-                    { name: "Image Converter", icon: "fas fa-exchange-alt", desc: "Convert between JPG, PNG, WebP, and more formats." },
-                    { name: "Image Compressor", icon: "fas fa-compress-alt", desc: "Reduce image file size while preserving quality." },
-                    { name: "Image Resizer", icon: "fas fa-expand-alt", desc: "Resize images to specific dimensions or percentages." },
-                    { name: "Image Cropper", icon: "fas fa-crop", desc: "Crop images to remove unwanted areas or focus on subjects." },
-                    { name: "Image to Text (OCR)", icon: "fas fa-font", desc: "Extract text from images using OCR technology." },
-                    { name: "Image Rotator / Flipper", icon: "fas fa-sync-alt", desc: "Rotate, flip, or mirror images horizontally/vertically." },
-                    { name: "Background Remover", icon: "fas fa-eraser", desc: "Remove background from images automatically." },
-                    { name: "Image Watermark", icon: "fas fa-tint", desc: "Add text or image watermark to photos." },
-                    { name: "Image Filters", icon: "fas fa-sliders-h", desc: "Apply filters and effects to images." },
-                    { name: "Image Collage Maker", icon: "fas fa-th", desc: "Create photo collages with multiple layouts." },
-                    { name: "Image Metadata Viewer", icon: "fas fa-info-circle", desc: "View EXIF and metadata of images." },
-                    { name: "Image Color Extractor", icon: "fas fa-palette", desc: "Extract color palette from images." }
+                    { name: "Image Converter", icon: "fas fa-exchange-alt", desc: "Convert between JPG, PNG, WebP, and more formats.", href: "image-converter.html" },
+                    { name: "Image Compressor", icon: "fas fa-compress-alt", desc: "Reduce image file size while preserving quality.", href: "image-compressor.html" },
+                    { name: "Image Resizer", icon: "fas fa-expand-alt", desc: "Resize images to specific dimensions or percentages.", href: "image-resizer.html" },
+                    { name: "Image Cropper", icon: "fas fa-crop", desc: "Crop images to remove unwanted areas or focus on subjects.", href: "image-cropper.html" },
+                    { name: "Image to Text (OCR)", icon: "fas fa-font", desc: "Extract text from images using OCR technology.", href: "ocr-tool.html" },
+                    { name: "Image Rotator / Flipper", icon: "fas fa-sync-alt", desc: "Rotate, flip, or mirror images horizontally/vertically.", href: "image-rotator.html" },
+                    { name: "Background Remover", icon: "fas fa-eraser", desc: "Remove background from images automatically.", href: "background-remover.html" },
+                    { name: "Image Watermark", icon: "fas fa-tint", desc: "Add text or image watermark to photos.", href: "watermark-tool.html" },
+                    { name: "Image Filters", icon: "fas fa-sliders-h", desc: "Apply filters and effects to images.", href: "image-filters.html" },
+                    { name: "Image Collage Maker", icon: "fas fa-th", desc: "Create photo collages with multiple layouts.", href: "collage-maker.html" },
+                    { name: "Image Metadata Viewer", icon: "fas fa-info-circle", desc: "View EXIF and metadata of images.", href: "metadata-viewer.html" },
+                    { name: "Image Color Extractor", icon: "fas fa-palette", desc: "Extract color palette from images.", href: "color-extractor.html" }
                 ]
             },
             {
@@ -1561,18 +1546,18 @@
                 categoryDesc: "Edit, convert, compress, and optimize video files with our powerful video tools.",
                 categoryClass: "video-tools",
                 tools: [
-                    { name: "Video Converter", icon: "fas fa-video", desc: "Convert videos between MP4, AVI, MOV, MKV, and other formats." },
-                    { name: "Video Compressor", icon: "fas fa-compress-arrows-alt", desc: "Reduce video file size without losing quality." },
-                    { name: "Video Trimmer", icon: "fas fa-cut", desc: "Trim and cut video clips to desired length." },
-                    { name: "Video Merger", icon: "fas fa-film", desc: "Combine multiple video clips into one seamless video." },
-                    { name: "Video to GIF Converter", icon: "fas fa-photo-video", desc: "Convert video clips to animated GIFs." },
-                    { name: "Video Speed Controller", icon: "fas fa-tachometer-alt", desc: "Change video playback speed (slow motion/fast forward)." },
-                    { name: "Video Audio Extractor", icon: "fas fa-volume-up", desc: "Extract audio from video files." },
-                    { name: "Video Resolution Changer", icon: "fas fa-desktop", desc: "Change video resolution (4K, 1080p, 720p, etc.)." },
-                    { name: "Video Subtitle Adder", icon: "fas fa-closed-captioning", desc: "Add subtitles to videos." },
-                    { name: "Video Screen Recorder", icon: "fas fa-record-vinyl", desc: "Record screen with audio." },
-                    { name: "Video to MP3 Converter", icon: "fas fa-music", desc: "Convert video to audio MP3 files." },
-                    { name: "Video Loop Creator", icon: "fas fa-redo", desc: "Create looping videos for social media." }
+                    { name: "Video Converter", icon: "fas fa-video", desc: "Convert videos between MP4, AVI, MOV, MKV, and other formats.", href: "video-converter.html" },
+                    { name: "Video Compressor", icon: "fas fa-compress-arrows-alt", desc: "Reduce video file size without losing quality.", href: "video-compressor.html" },
+                    { name: "Video Trimmer", icon: "fas fa-cut", desc: "Trim and cut video clips to desired length.", href: "video-trimmer.html" },
+                    { name: "Video Merger", icon: "fas fa-film", desc: "Combine multiple video clips into one seamless video.", href: "video-merger.html" },
+                    { name: "Video to GIF Converter", icon: "fas fa-photo-video", desc: "Convert video clips to animated GIFs.", href: "video-to-gif.html" },
+                    { name: "Video Speed Controller", icon: "fas fa-tachometer-alt", desc: "Change video playback speed (slow motion/fast forward).", href: "video-speed.html" },
+                    { name: "Video Audio Extractor", icon: "fas fa-volume-up", desc: "Extract audio from video files.", href: "audio-extractor.html" },
+                    { name: "Video Resolution Changer", icon: "fas fa-desktop", desc: "Change video resolution (4K, 1080p, 720p, etc.).", href: "video-resizer.html" },
+                    { name: "Video Subtitle Adder", icon: "fas fa-closed-captioning", desc: "Add subtitles to videos.", href: "subtitle-adder.html" },
+                    { name: "Video Screen Recorder", icon: "fas fa-record-vinyl", desc: "Record screen with audio.", href: "screen-recorder.html" },
+                    { name: "Video to MP3 Converter", icon: "fas fa-music", desc: "Convert video to audio MP3 files.", href: "video-to-mp3.html" },
+                    { name: "Video Loop Creator", icon: "fas fa-redo", desc: "Create looping videos for social media.", href: "video-looper.html" }
                 ]
             },
             {
@@ -1581,18 +1566,18 @@
                 categoryDesc: "Handle PDFs and documents with powerful conversion and editing tools.",
                 categoryClass: "document-tools",
                 tools: [
-                    { name: "PDF to Word", icon: "fas fa-file-word", desc: "Convert PDF files to editable Word documents." },
-                    { name: "Word to PDF", icon: "fas fa-file-pdf", desc: "Convert Word documents to PDF format." },
-                    { name: "PDF Compressor", icon: "fas fa-file-archive", desc: "Reduce PDF file size for easier sharing and storage." },
-                    { name: "PDF Merger", icon: "fas fa-copy", desc: "Combine multiple PDFs into one document." },
-                    { name: "PDF Splitter", icon: "fas fa-cut", desc: "Split large PDFs into smaller ones." },
-                    { name: "PDF to Excel", icon: "fas fa-file-excel", desc: "Convert PDF tables to Excel spreadsheets." },
-                    { name: "PDF to PowerPoint", icon: "fas fa-file-powerpoint", desc: "Convert PDF to PowerPoint presentations." },
-                    { name: "PDF to Image", icon: "fas fa-file-image", desc: "Convert PDF pages to image files." },
-                    { name: "Image to PDF", icon: "fas fa-images", desc: "Convert multiple images to a single PDF." },
-                    { name: "PDF Lock / Unlock", icon: "fas fa-lock", desc: "Add password protection or remove it from PDF files." },
-                    { name: "eSign PDF", icon: "fas fa-signature", desc: "Add digital signatures to PDF documents securely." },
-                    { name: "PDF Rotate Pages", icon: "fas fa-sync", desc: "Rotate pages in PDF documents." }
+                    { name: "PDF to Word", icon: "fas fa-file-word", desc: "Convert PDF files to editable Word documents.", href: "pdf-to-word.html" },
+                    { name: "Word to PDF", icon: "fas fa-file-pdf", desc: "Convert Word documents to PDF format.", href: "word-to-pdf.html" },
+                    { name: "PDF Compressor", icon: "fas fa-file-archive", desc: "Reduce PDF file size for easier sharing and storage.", href: "pdf-compressor.html" },
+                    { name: "PDF Merger", icon: "fas fa-copy", desc: "Combine multiple PDFs into one document.", href: "pdf-merger.html" },
+                    { name: "PDF Splitter", icon: "fas fa-cut", desc: "Split large PDFs into smaller ones.", href: "pdf-splitter.html" },
+                    { name: "PDF to Excel", icon: "fas fa-file-excel", desc: "Convert PDF tables to Excel spreadsheets.", href: "pdf-to-excel.html" },
+                    { name: "PDF to PowerPoint", icon: "fas fa-file-powerpoint", desc: "Convert PDF to PowerPoint presentations.", href: "pdf-to-ppt.html" },
+                    { name: "PDF to Image", icon: "fas fa-file-image", desc: "Convert PDF pages to image files.", href: "pdf-to-image.html" },
+                    { name: "Image to PDF", icon: "fas fa-images", desc: "Convert multiple images to a single PDF.", href: "image-to-pdf.html" },
+                    { name: "PDF Lock / Unlock", icon: "fas fa-lock", desc: "Add password protection or remove it from PDF files.", href: "pdf-lock.html" },
+                    { name: "eSign PDF", icon: "fas fa-signature", desc: "Add digital signatures to PDF documents securely.", href: "esign-pdf.html" },
+                    { name: "PDF Rotate Pages", icon: "fas fa-sync", desc: "Rotate pages in PDF documents.", href: "pdf-rotate.html" }
                 ]
             },
             {
@@ -1601,18 +1586,18 @@
                 categoryDesc: "Perform calculations for finance, health, science, and everyday needs.",
                 categoryClass: "calculator-tools",
                 tools: [
-                    { name: "Scientific Calculator", icon: "fas fa-calculator", desc: "Advanced calculator with scientific functions." },
-                    { name: "Age Calculator", icon: "fas fa-birthday-cake", desc: "Calculate age in years, months, and days." },
-                    { name: "BMI Calculator", icon: "fas fa-weight", desc: "Calculate Body Mass Index based on height and weight." },
-                    { name: "Loan EMI Calculator", icon: "fas fa-hand-holding-usd", desc: "Calculate Equated Monthly Installments for loans." },
-                    { name: "GST Calculator", icon: "fas fa-percentage", desc: "Calculate Goods and Services Tax amounts." },
-                    { name: "Currency Converter", icon: "fas fa-money-bill-wave", desc: "Convert between world currencies with live rates." },
-                    { name: "Tip Calculator", icon: "fas fa-utensils", desc: "Calculate tips for restaurants and services." },
-                    { name: "Date Calculator", icon: "fas fa-calendar-alt", desc: "Calculate days between dates or add/subtract days." },
-                    { name: "Percentage Calculator", icon: "fas fa-percent", desc: "Calculate percentages, increases, and decreases." },
-                    { name: "Compound Interest Calculator", icon: "fas fa-chart-line", desc: "Calculate compound interest on investments." },
-                    { name: "Salary Calculator", icon: "fas fa-briefcase", desc: "Calculate net salary after deductions." },
-                    { name: "Unit Price Calculator", icon: "fas fa-tags", desc: "Calculate price per unit for shopping." }
+                    { name: "Scientific Calculator", icon: "fas fa-calculator", desc: "Advanced calculator with scientific functions.", href: "scientific-calculator.html" },
+                    { name: "Age Calculator", icon: "fas fa-birthday-cake", desc: "Calculate age in years, months, and days.", href: "age-calculator.html" },
+                    { name: "BMI Calculator", icon: "fas fa-weight", desc: "Calculate Body Mass Index based on height and weight.", href: "bmi-calculator.html" },
+                    { name: "Loan EMI Calculator", icon: "fas fa-hand-holding-usd", desc: "Calculate Equated Monthly Installments for loans.", href: "emi-calculator.html" },
+                    { name: "GST Calculator", icon: "fas fa-percentage", desc: "Calculate Goods and Services Tax amounts.", href: "gst-calculator.html" },
+                    { name: "Currency Converter", icon: "fas fa-money-bill-wave", desc: "Convert between world currencies with live rates.", href: "currency-converter.html" },
+                    { name: "Tip Calculator", icon: "fas fa-utensils", desc: "Calculate tips for restaurants and services.", href: "tip-calculator.html" },
+                    { name: "Date Calculator", icon: "fas fa-calendar-alt", desc: "Calculate days between dates or add/subtract days.", href: "date-calculator.html" },
+                    { name: "Percentage Calculator", icon: "fas fa-percent", desc: "Calculate percentages, increases, and decreases.", href: "percentage-calculator.html" },
+                    { name: "Compound Interest Calculator", icon: "fas fa-chart-line", desc: "Calculate compound interest on investments.", href: "compound-interest.html" },
+                    { name: "Salary Calculator", icon: "fas fa-briefcase", desc: "Calculate net salary after deductions.", href: "salary-calculator.html" },
+                    { name: "Unit Price Calculator", icon: "fas fa-tags", desc: "Calculate price per unit for shopping.", href: "unit-price-calculator.html" }
                 ]
             },
             {
@@ -1621,18 +1606,18 @@
                 categoryDesc: "Manipulate, analyze, and transform text with our text processing utilities.",
                 categoryClass: "text-tools",
                 tools: [
-                    { name: "Text Case Converter", icon: "fas fa-text-height", desc: "Convert text between uppercase, lowercase, and title case." },
-                    { name: "Word & Character Counter", icon: "fas fa-font", desc: "Count words, characters, sentences, and paragraphs." },
-                    { name: "Remove Duplicate Lines", icon: "fas fa-backspace", desc: "Remove duplicate lines from text blocks." },
-                    { name: "Text Sorter", icon: "fas fa-sort-alpha-down", desc: "Sort text lines alphabetically or numerically." },
-                    { name: "Text Reverser", icon: "fas fa-retweet", desc: "Reverse text, words, or character order." },
-                    { name: "Text Encryptor / Decryptor", icon: "fas fa-key", desc: "Encrypt and decrypt text with various algorithms." },
-                    { name: "Lorem Ipsum Generator", icon: "fas fa-paragraph", desc: "Generate placeholder text for designs." },
-                    { name: "Text Diff Checker", icon: "fas fa-code", desc: "Compare two texts and find differences." },
-                    { name: "Markdown to HTML", icon: "fas fa-code", desc: "Convert Markdown text to HTML." },
-                    { name: "Text to Speech", icon: "fas fa-volume-up", desc: "Convert text to speech audio." },
-                    { name: "Speech to Text", icon: "fas fa-microphone", desc: "Convert speech to text (voice typing)." },
-                    { name: "Password Generator", icon: "fas fa-lock", desc: "Generate secure random passwords." }
+                    { name: "Text Case Converter", icon: "fas fa-text-height", desc: "Convert text between uppercase, lowercase, and title case.", href: "case-converter.html" },
+                    { name: "Word & Character Counter", icon: "fas fa-font", desc: "Count words, characters, sentences, and paragraphs.", href: "word-counter.html" },
+                    { name: "Remove Duplicate Lines", icon: "fas fa-backspace", desc: "Remove duplicate lines from text blocks.", href: "remove-duplicates.html" },
+                    { name: "Text Sorter", icon: "fas fa-sort-alpha-down", desc: "Sort text lines alphabetically or numerically.", href: "text-sorter.html" },
+                    { name: "Text Reverser", icon: "fas fa-retweet", desc: "Reverse text, words, or character order.", href: "text-reverser.html" },
+                    { name: "Text Encryptor / Decryptor", icon: "fas fa-key", desc: "Encrypt and decrypt text with various algorithms.", href: "text-encryptor.html" },
+                    { name: "Lorem Ipsum Generator", icon: "fas fa-paragraph", desc: "Generate placeholder text for designs.", href: "lorem-ipsum.html" },
+                    { name: "Text Diff Checker", icon: "fas fa-code", desc: "Compare two texts and find differences.", href: "text-diff.html" },
+                    { name: "Markdown to HTML", icon: "fas fa-code", desc: "Convert Markdown text to HTML.", href: "markdown-to-html.html" },
+                    { name: "Text to Speech", icon: "fas fa-volume-up", desc: "Convert text to speech audio.", href: "text-to-speech.html" },
+                    { name: "Speech to Text", icon: "fas fa-microphone", desc: "Convert speech to text (voice typing).", href: "speech-to-text.html" },
+                    { name: "Password Generator", icon: "fas fa-lock", desc: "Generate secure random passwords.", href: "password-generator.html" }
                 ]
             },
             {
@@ -1641,18 +1626,18 @@
                 categoryDesc: "Tools for web developers, programmers, and technical users.",
                 categoryClass: "web-tools",
                 tools: [
-                    { name: "HTML Formatter", icon: "fas fa-code", desc: "Format and beautify HTML code." },
-                    { name: "CSS Formatter", icon: "fas fa-css3", desc: "Format and beautify CSS code." },
-                    { name: "JavaScript Formatter", icon: "fas fa-js-square", desc: "Format and beautify JavaScript code." },
-                    { name: "JSON Formatter & Validator", icon: "fas fa-brackets-curly", desc: "Format and validate JSON data structures." },
-                    { name: "Base64 Encoder / Decoder", icon: "fas fa-lock", desc: "Encode and decode Base64 strings and files." },
-                    { name: "URL Encoder / Decoder", icon: "fas fa-link", desc: "Encode and decode URL strings and parameters." },
-                    { name: "Color Picker & Converter", icon: "fas fa-palette", desc: "Pick colors and convert between formats." },
-                    { name: "Regex Tester", icon: "fas fa-terminal", desc: "Test and debug regular expressions." },
-                    { name: "HTTP Header Checker", icon: "fas fa-server", desc: "Check HTTP headers of any website." },
-                    { name: "Website Speed Test", icon: "fas fa-tachometer-alt", desc: "Test website loading speed." },
-                    { name: "SSL Certificate Checker", icon: "fas fa-shield-alt", desc: "Check SSL certificate validity." },
-                    { name: "IP Address Lookup", icon: "fas fa-globe", desc: "Lookup IP address information." }
+                    { name: "HTML Formatter", icon: "fas fa-code", desc: "Format and beautify HTML code.", href: "html-formatter.html" },
+                    { name: "CSS Formatter", icon: "fas fa-css3", desc: "Format and beautify CSS code.", href: "css-formatter.html" },
+                    { name: "JavaScript Formatter", icon: "fas fa-js-square", desc: "Format and beautify JavaScript code.", href: "js-formatter.html" },
+                    { name: "JSON Formatter & Validator", icon: "fas fa-brackets-curly", desc: "Format and validate JSON data structures.", href: "json-formatter.html" },
+                    { name: "Base64 Encoder / Decoder", icon: "fas fa-lock", desc: "Encode and decode Base64 strings and files.", href: "base64-tool.html" },
+                    { name: "URL Encoder / Decoder", icon: "fas fa-link", desc: "Encode and decode URL strings and parameters.", href: "url-encoder.html" },
+                    { name: "Color Picker & Converter", icon: "fas fa-palette", desc: "Pick colors and convert between formats.", href: "color-picker.html" },
+                    { name: "Regex Tester", icon: "fas fa-terminal", desc: "Test and debug regular expressions.", href: "regex-tester.html" },
+                    { name: "HTTP Header Checker", icon: "fas fa-server", desc: "Check HTTP headers of any website.", href: "http-header-checker.html" },
+                    { name: "Website Speed Test", icon: "fas fa-tachometer-alt", desc: "Test website loading speed.", href: "speed-test.html" },
+                    { name: "SSL Certificate Checker", icon: "fas fa-shield-alt", desc: "Check SSL certificate validity.", href: "ssl-checker.html" },
+                    { name: "IP Address Lookup", icon: "fas fa-globe", desc: "Lookup IP address information.", href: "ip-lookup.html" }
                 ]
             },
             {
@@ -1661,18 +1646,18 @@
                 categoryDesc: "Create, convert, and analyze colors for design and development.",
                 categoryClass: "color-tools",
                 tools: [
-                    { name: "Color Picker from Image", icon: "fas fa-eye-dropper", desc: "Extract colors from uploaded images." },
-                    { name: "HEX to RGB Converter", icon: "fas fa-exchange-alt", desc: "Convert HEX color codes to RGB and vice versa." },
-                    { name: "RGB to CMYK Converter", icon: "fas fa-exchange-alt", desc: "Convert RGB colors to CMYK for printing." },
-                    { name: "Gradient Generator", icon: "fas fa-fill-drip", desc: "Create beautiful CSS gradients with custom colors." },
-                    { name: "Contrast Checker", icon: "fas fa-adjust", desc: "Check color contrast for accessibility standards." },
-                    { name: "Palette Generator", icon: "fas fa-swatchbook", desc: "Generate harmonious color palettes." },
-                    { name: "Color Blindness Simulator", icon: "fas fa-low-vision", desc: "Simulate how colors appear to colorblind users." },
-                    { name: "Color Name Finder", icon: "fas fa-tag", desc: "Find names for any color code." },
-                    { name: "Color Shade Generator", icon: "fas fa-layer-group", desc: "Generate shades and tints of a color." },
-                    { name: "Random Color Generator", icon: "fas fa-random", desc: "Generate random color schemes." },
-                    { name: "Color Mixer", icon: "fas fa-blender", desc: "Mix two colors to create new ones." },
-                    { name: "Color Temperature Adjuster", icon: "fas fa-thermometer-half", desc: "Adjust color temperature (warm/cool)." }
+                    { name: "Color Picker from Image", icon: "fas fa-eye-dropper", desc: "Extract colors from uploaded images.", href: "color-picker-image.html" },
+                    { name: "HEX to RGB Converter", icon: "fas fa-exchange-alt", desc: "Convert HEX color codes to RGB and vice versa.", href: "hex-to-rgb.html" },
+                    { name: "RGB to CMYK Converter", icon: "fas fa-exchange-alt", desc: "Convert RGB colors to CMYK for printing.", href: "rgb-to-cmyk.html" },
+                    { name: "Gradient Generator", icon: "fas fa-fill-drip", desc: "Create beautiful CSS gradients with custom colors.", href: "gradient-generator.html" },
+                    { name: "Contrast Checker", icon: "fas fa-adjust", desc: "Check color contrast for accessibility standards.", href: "contrast-checker.html" },
+                    { name: "Palette Generator", icon: "fas fa-swatchbook", desc: "Generate harmonious color palettes.", href: "palette-generator.html" },
+                    { name: "Color Blindness Simulator", icon: "fas fa-low-vision", desc: "Simulate how colors appear to colorblind users.", href: "color-blindness.html" },
+                    { name: "Color Name Finder", icon: "fas fa-tag", desc: "Find names for any color code.", href: "color-name.html" },
+                    { name: "Color Shade Generator", icon: "fas fa-layer-group", desc: "Generate shades and tints of a color.", href: "color-shade.html" },
+                    { name: "Random Color Generator", icon: "fas fa-random", desc: "Generate random color schemes.", href: "random-color.html" },
+                    { name: "Color Mixer", icon: "fas fa-blender", desc: "Mix two colors to create new ones.", href: "color-mixer.html" },
+                    { name: "Color Temperature Adjuster", icon: "fas fa-thermometer-half", desc: "Adjust color temperature (warm/cool).", href: "color-temperature.html" }
                 ]
             },
             {
@@ -1681,18 +1666,18 @@
                 categoryDesc: "General-purpose utilities for everyday tasks and conversions.",
                 categoryClass: "utility-tools",
                 tools: [
-                    { name: "QR Code Generator", icon: "fas fa-qrcode", desc: "Create QR codes for URLs, text, and contacts." },
-                    { name: "QR Code Scanner", icon: "fas fa-camera", desc: "Scan QR codes from images." },
-                    { name: "Barcode Generator", icon: "fas fa-barcode", desc: "Generate barcodes in various formats." },
-                    { name: "UUID Generator", icon: "fas fa-fingerprint", desc: "Generate unique UUIDs for development purposes." },
-                    { name: "Unit Converter", icon: "fas fa-ruler-combined", desc: "Convert between units of length, weight, volume, etc." },
-                    { name: "Time Zone Converter", icon: "fas fa-globe-americas", desc: "Convert times between different time zones." },
-                    { name: "Random Number Generator", icon: "fas fa-random", desc: "Generate random numbers within a range." },
-                    { name: "Password Strength Checker", icon: "fas fa-lock", desc: "Check password strength and security." },
-                    { name: "File Hash Generator", icon: "fas fa-hashtag", desc: "Generate MD5, SHA-1, SHA-256 hashes for files." },
-                    { name: "Morse Code Translator", icon: "fas fa-signal", desc: "Translate text to Morse code and vice versa." },
-                    { name: "Binary / Hex / Decimal Converter", icon: "fas fa-exchange-alt", desc: "Convert between number systems." },
-                    { name: "Stopwatch & Timer", icon: "fas fa-stopwatch", desc: "Stopwatch, countdown timer, and alarm." }
+                    { name: "QR Code Generator", icon: "fas fa-qrcode", desc: "Create QR codes for URLs, text, and contacts.", href: "qr-generator.html" },
+                    { name: "QR Code Scanner", icon: "fas fa-camera", desc: "Scan QR codes from images.", href: "qr-scanner.html" },
+                    { name: "Barcode Generator", icon: "fas fa-barcode", desc: "Generate barcodes in various formats.", href: "barcode-generator.html" },
+                    { name: "UUID Generator", icon: "fas fa-fingerprint", desc: "Generate unique UUIDs for development purposes.", href: "uuid-generator.html" },
+                    { name: "Unit Converter", icon: "fas fa-ruler-combined", desc: "Convert between units of length, weight, volume, etc.", href: "unit-converter.html" },
+                    { name: "Time Zone Converter", icon: "fas fa-globe-americas", desc: "Convert times between different time zones.", href: "timezone-converter.html" },
+                    { name: "Random Number Generator", icon: "fas fa-random", desc: "Generate random numbers within a range.", href: "random-number.html" },
+                    { name: "Password Strength Checker", icon: "fas fa-lock", desc: "Check password strength and security.", href: "password-strength.html" },
+                    { name: "File Hash Generator", icon: "fas fa-hashtag", desc: "Generate MD5, SHA-1, SHA-256 hashes for files.", href: "hash-generator.html" },
+                    { name: "Morse Code Translator", icon: "fas fa-signal", desc: "Translate text to Morse code and vice versa.", href: "morse-code.html" },
+                    { name: "Binary / Hex / Decimal Converter", icon: "fas fa-exchange-alt", desc: "Convert between number systems.", href: "number-converter.html" },
+                    { name: "Stopwatch & Timer", icon: "fas fa-stopwatch", desc: "Stopwatch, countdown timer, and alarm.", href: "stopwatch-timer.html" }
                 ]
             },
             {
@@ -1701,18 +1686,18 @@
                 categoryDesc: "Mathematical calculations, graphing, and problem-solving tools.",
                 categoryClass: "math-tools",
                 tools: [
-                    { name: "Graphing Calculator", icon: "fas fa-chart-line", desc: "Plot graphs of mathematical functions." },
-                    { name: "Algebra Calculator", icon: "fas fa-superscript", desc: "Solve algebraic equations step by step." },
-                    { name: "Geometry Calculator", icon: "fas fa-shapes", desc: "Calculate area, volume, perimeter of shapes." },
-                    { name: "Statistics Calculator", icon: "fas fa-chart-bar", desc: "Calculate mean, median, mode, standard deviation." },
-                    { name: "Matrix Calculator", icon: "fas fa-th", desc: "Perform matrix operations and calculations." },
-                    { name: "Trigonometry Calculator", icon: "fas fa-drafting-compass", desc: "Calculate trigonometric functions." },
-                    { name: "Fraction Calculator", icon: "fas fa-divide", desc: "Add, subtract, multiply, and divide fractions." },
-                    { name: "Prime Number Checker", icon: "fas fa-hashtag", desc: "Check if a number is prime." },
-                    { name: "Factorial Calculator", icon: "fas fa-exclamation", desc: "Calculate factorial of numbers." },
-                    { name: "Permutation & Combination", icon: "fas fa-random", desc: "Calculate permutations and combinations." },
-                    { name: "Sequence Generator", icon: "fas fa-list-ol", desc: "Generate number sequences and series." },
-                    { name: "Math Equation Solver", icon: "fas fa-equals", desc: "Solve complex mathematical equations." }
+                    { name: "Graphing Calculator", icon: "fas fa-chart-line", desc: "Plot graphs of mathematical functions.", href: "graphing-calculator.html" },
+                    { name: "Algebra Calculator", icon: "fas fa-superscript", desc: "Solve algebraic equations step by step.", href: "algebra-calculator.html" },
+                    { name: "Geometry Calculator", icon: "fas fa-shapes", desc: "Calculate area, volume, perimeter of shapes.", href: "geometry-calculator.html" },
+                    { name: "Statistics Calculator", icon: "fas fa-chart-bar", desc: "Calculate mean, median, mode, standard deviation.", href: "statistics-calculator.html" },
+                    { name: "Matrix Calculator", icon: "fas fa-th", desc: "Perform matrix operations and calculations.", href: "matrix-calculator.html" },
+                    { name: "Trigonometry Calculator", icon: "fas fa-drafting-compass", desc: "Calculate trigonometric functions.", href: "trigonometry-calculator.html" },
+                    { name: "Fraction Calculator", icon: "fas fa-divide", desc: "Add, subtract, multiply, and divide fractions.", href: "fraction-calculator.html" },
+                    { name: "Prime Number Checker", icon: "fas fa-hashtag", desc: "Check if a number is prime.", href: "prime-checker.html" },
+                    { name: "Factorial Calculator", icon: "fas fa-exclamation", desc: "Calculate factorial of numbers.", href: "factorial-calculator.html" },
+                    { name: "Permutation & Combination", icon: "fas fa-random", desc: "Calculate permutations and combinations.", href: "permutation-combination.html" },
+                    { name: "Sequence Generator", icon: "fas fa-list-ol", desc: "Generate number sequences and series.", href: "sequence-generator.html" },
+                    { name: "Math Equation Solver", icon: "fas fa-equals", desc: "Solve complex mathematical equations.", href: "equation-solver.html" }
                 ]
             },
             {
@@ -1721,18 +1706,18 @@
                 categoryDesc: "Tools for business calculations, finance, and analysis.",
                 categoryClass: "business-tools",
                 tools: [
-                    { name: "Invoice Generator", icon: "fas fa-file-invoice", desc: "Create professional invoices." },
-                    { name: "Profit Margin Calculator", icon: "fas fa-chart-pie", desc: "Calculate profit margins and markup." },
-                    { name: "ROI Calculator", icon: "fas fa-chart-line", desc: "Calculate Return on Investment." },
-                    { name: "Tax Calculator", icon: "fas fa-file-invoice-dollar", desc: "Calculate income tax and deductions." },
-                    { name: "Currency Converter Pro", icon: "fas fa-money-bill-wave", desc: "Advanced currency converter with historical rates." },
-                    { name: "Salary Paycheck Calculator", icon: "fas fa-money-check", desc: "Calculate net pay after taxes." },
-                    { name: "Business Card Designer", icon: "fas fa-address-card", desc: "Design printable business cards." },
-                    { name: "Expense Tracker", icon: "fas fa-receipt", desc: "Track and categorize expenses." },
-                    { name: "Break-Even Calculator", icon: "fas fa-balance-scale", desc: "Calculate break-even point for business." },
-                    { name: "Depreciation Calculator", icon: "fas fa-car", desc: "Calculate asset depreciation." },
-                    { name: "Loan Comparison Calculator", icon: "fas fa-handshake", desc: "Compare different loan options." },
-                    { name: "Business Plan Template", icon: "fas fa-briefcase", desc: "Create business plan templates." }
+                    { name: "Invoice Generator", icon: "fas fa-file-invoice", desc: "Create professional invoices.", href: "invoice-generator.html" },
+                    { name: "Profit Margin Calculator", icon: "fas fa-chart-pie", desc: "Calculate profit margins and markup.", href: "profit-margin.html" },
+                    { name: "ROI Calculator", icon: "fas fa-chart-line", desc: "Calculate Return on Investment.", href: "roi-calculator.html" },
+                    { name: "Tax Calculator", icon: "fas fa-file-invoice-dollar", desc: "Calculate income tax and deductions.", href: "tax-calculator.html" },
+                    { name: "Currency Converter Pro", icon: "fas fa-money-bill-wave", desc: "Advanced currency converter with historical rates.", href: "currency-converter-pro.html" },
+                    { name: "Salary Paycheck Calculator", icon: "fas fa-money-check", desc: "Calculate net pay after taxes.", href: "paycheck-calculator.html" },
+                    { name: "Business Card Designer", icon: "fas fa-address-card", desc: "Design printable business cards.", href: "business-card.html" },
+                    { name: "Expense Tracker", icon: "fas fa-receipt", desc: "Track and categorize expenses.", href: "expense-tracker.html" },
+                    { name: "Break-Even Calculator", icon: "fas fa-balance-scale", desc: "Calculate break-even point for business.", href: "break-even.html" },
+                    { name: "Depreciation Calculator", icon: "fas fa-car", desc: "Calculate asset depreciation.", href: "depreciation-calculator.html" },
+                    { name: "Loan Comparison Calculator", icon: "fas fa-handshake", desc: "Compare different loan options.", href: "loan-comparison.html" },
+                    { name: "Business Plan Template", icon: "fas fa-briefcase", desc: "Create business plan templates.", href: "business-plan.html" }
                 ]
             },
             {
@@ -1741,18 +1726,18 @@
                 categoryDesc: "Edit, convert, and process audio files and music.",
                 categoryClass: "audio-tools",
                 tools: [
-                    { name: "Audio Converter", icon: "fas fa-file-audio", desc: "Convert between MP3, WAV, AAC, FLAC, etc." },
-                    { name: "Audio Cutter", icon: "fas fa-cut", desc: "Trim and cut audio files." },
-                    { name: "Audio Joiner", icon: "fas fa-link", desc: "Join multiple audio files together." },
-                    { name: "MP3 Compressor", icon: "fas fa-compress-alt", desc: "Reduce MP3 file size." },
-                    { name: "Audio Speed Changer", icon: "fas fa-tachometer-alt", desc: "Change audio playback speed." },
-                    { name: "Audio Volume Booster", icon: "fas fa-volume-up", desc: "Increase audio volume." },
-                    { name: "Noise Remover", icon: "fas fa-volume-mute", desc: "Remove background noise from audio." },
-                    { name: "Audio to Text Converter", icon: "fas fa-keyboard", desc: "Transcribe audio to text." },
-                    { name: "Ringtone Maker", icon: "fas fa-mobile-alt", desc: "Create custom ringtones from audio." },
-                    { name: "Audio Equalizer", icon: "fas fa-sliders-h", desc: "Adjust audio frequencies and equalize." },
-                    { name: "Audio Reverse", icon: "fas fa-redo", desc: "Reverse audio playback." },
-                    { name: "BPM (Beats Per Minute) Finder", icon: "fas fa-drum", desc: "Find BPM of music tracks." }
+                    { name: "Audio Converter", icon: "fas fa-file-audio", desc: "Convert between MP3, WAV, AAC, FLAC, etc.", href: "audio-converter.html" },
+                    { name: "Audio Cutter", icon: "fas fa-cut", desc: "Trim and cut audio files.", href: "audio-cutter.html" },
+                    { name: "Audio Joiner", icon: "fas fa-link", desc: "Join multiple audio files together.", href: "audio-joiner.html" },
+                    { name: "MP3 Compressor", icon: "fas fa-compress-alt", desc: "Reduce MP3 file size.", href: "mp3-compressor.html" },
+                    { name: "Audio Speed Changer", icon: "fas fa-tachometer-alt", desc: "Change audio playback speed.", href: "audio-speed.html" },
+                    { name: "Audio Volume Booster", icon: "fas fa-volume-up", desc: "Increase audio volume.", href: "volume-booster.html" },
+                    { name: "Noise Remover", icon: "fas fa-volume-mute", desc: "Remove background noise from audio.", href: "noise-remover.html" },
+                    { name: "Audio to Text Converter", icon: "fas fa-keyboard", desc: "Transcribe audio to text.", href: "audio-to-text.html" },
+                    { name: "Ringtone Maker", icon: "fas fa-mobile-alt", desc: "Create custom ringtones from audio.", href: "ringtone-maker.html" },
+                    { name: "Audio Equalizer", icon: "fas fa-sliders-h", desc: "Adjust audio frequencies and equalize.", href: "audio-equalizer.html" },
+                    { name: "Audio Reverse", icon: "fas fa-redo", desc: "Reverse audio playback.", href: "audio-reverse.html" },
+                    { name: "BPM (Beats Per Minute) Finder", icon: "fas fa-drum", desc: "Find BPM of music tracks.", href: "bpm-finder.html" }
                 ]
             },
             {
@@ -1761,18 +1746,18 @@
                 categoryDesc: "Tools for social media content creation and optimization.",
                 categoryClass: "social-tools",
                 tools: [
-                    { name: "YouTube Thumbnail Maker", icon: "fab fa-youtube", desc: "Create YouTube video thumbnails." },
-                    { name: "Instagram Story Maker", icon: "fab fa-instagram", desc: "Create Instagram stories with templates." },
-                    { name: "Facebook Cover Maker", icon: "fab fa-facebook", desc: "Design Facebook cover photos." },
-                    { name: "Twitter Header Maker", icon: "fab fa-twitter", desc: "Create Twitter header images." },
-                    { name: "Social Media Scheduler", icon: "fas fa-calendar", desc: "Schedule posts for social media." },
-                    { name: "Hashtag Generator", icon: "fas fa-hashtag", desc: "Generate relevant hashtags for posts." },
-                    { name: "Social Media Analytics", icon: "fas fa-chart-bar", desc: "Analyze social media metrics." },
-                    { name: "Profile Picture Maker", icon: "fas fa-user-circle", desc: "Create circular profile pictures." },
-                    { name: "Video Size Optimizer", icon: "fas fa-video", desc: "Optimize videos for social media platforms." },
-                    { name: "Caption Generator", icon: "fas fa-comment-alt", desc: "Generate engaging social media captions." },
-                    { name: "Link Shortener", icon: "fas fa-link", desc: "Shorten URLs for social media." },
-                    { name: "Social Media Calendar", icon: "fas fa-calendar-alt", desc: "Plan social media content calendar." }
+                    { name: "YouTube Thumbnail Maker", icon: "fab fa-youtube", desc: "Create YouTube video thumbnails.", href: "youtube-thumbnail.html" },
+                    { name: "Instagram Story Maker", icon: "fab fa-instagram", desc: "Create Instagram stories with templates.", href: "instagram-story.html" },
+                    { name: "Facebook Cover Maker", icon: "fab fa-facebook", desc: "Design Facebook cover photos.", href: "facebook-cover.html" },
+                    { name: "Twitter Header Maker", icon: "fab fa-twitter", desc: "Create Twitter header images.", href: "twitter-header.html" },
+                    { name: "Social Media Scheduler", icon: "fas fa-calendar", desc: "Schedule posts for social media.", href: "social-scheduler.html" },
+                    { name: "Hashtag Generator", icon: "fas fa-hashtag", desc: "Generate relevant hashtags for posts.", href: "hashtag-generator.html" },
+                    { name: "Social Media Analytics", icon: "fas fa-chart-bar", desc: "Analyze social media metrics.", href: "social-analytics.html" },
+                    { name: "Profile Picture Maker", icon: "fas fa-user-circle", desc: "Create circular profile pictures.", href: "profile-picture.html" },
+                    { name: "Video Size Optimizer", icon: "fas fa-video", desc: "Optimize videos for social media platforms.", href: "video-optimizer.html" },
+                    { name: "Caption Generator", icon: "fas fa-comment-alt", desc: "Generate engaging social media captions.", href: "caption-generator.html" },
+                    { name: "Link Shortener", icon: "fas fa-link", desc: "Shorten URLs for social media.", href: "link-shortener.html" },
+                    { name: "Social Media Calendar", icon: "fas fa-calendar-alt", desc: "Plan social media content calendar.", href: "social-calendar.html" }
                 ]
             },
             {
@@ -1781,18 +1766,18 @@
                 categoryDesc: "Encryption, security, and privacy protection tools.",
                 categoryClass: "security-tools",
                 tools: [
-                    { name: "Password Generator Pro", icon: "fas fa-lock", desc: "Generate strong, secure passwords." },
-                    { name: "Password Strength Meter", icon: "fas fa-shield-alt", desc: "Test password strength and security." },
-                    { name: "Encryption Tool", icon: "fas fa-key", desc: "Encrypt and decrypt files and text." },
-                    { name: "File Shredder", icon: "fas fa-trash-alt", desc: "Permanently delete files securely." },
-                    { name: "VPN Speed Test", icon: "fas fa-shield-virus", desc: "Test VPN connection speed." },
-                    { name: "Website Safety Checker", icon: "fas fa-search", desc: "Check if a website is safe." },
-                    { name: "Two-Factor Auth Generator", icon: "fas fa-mobile-alt", desc: "Generate 2FA codes." },
-                    { name: "Data Masking Tool", icon: "fas fa-user-secret", desc: "Mask sensitive data in files." },
-                    { name: "Secure File Transfer", icon: "fas fa-paper-plane", desc: "Send files securely with encryption." },
-                    { name: "Digital Certificate Generator", icon: "fas fa-certificate", desc: "Create digital certificates." },
-                    { name: "Firewall Tester", icon: "fas fa-fire", desc: "Test firewall and port security." },
-                    { name: "Privacy Policy Generator", icon: "fas fa-user-shield", desc: "Generate privacy policy for websites." }
+                    { name: "Password Generator Pro", icon: "fas fa-lock", desc: "Generate strong, secure passwords.", href: "password-generator-pro.html" },
+                    { name: "Password Strength Meter", icon: "fas fa-shield-alt", desc: "Test password strength and security.", href: "password-strength-meter.html" },
+                    { name: "Encryption Tool", icon: "fas fa-key", desc: "Encrypt and decrypt files and text.", href: "encryption-tool.html" },
+                    { name: "File Shredder", icon: "fas fa-trash-alt", desc: "Permanently delete files securely.", href: "file-shredder.html" },
+                    { name: "VPN Speed Test", icon: "fas fa-shield-virus", desc: "Test VPN connection speed.", href: "vpn-speed-test.html" },
+                    { name: "Website Safety Checker", icon: "fas fa-search", desc: "Check if a website is safe.", href: "website-safety.html" },
+                    { name: "Two-Factor Auth Generator", icon: "fas fa-mobile-alt", desc: "Generate 2FA codes.", href: "2fa-generator.html" },
+                    { name: "Data Masking Tool", icon: "fas fa-user-secret", desc: "Mask sensitive data in files.", href: "data-masking.html" },
+                    { name: "Secure File Transfer", icon: "fas fa-paper-plane", desc: "Send files securely with encryption.", href: "secure-transfer.html" },
+                    { name: "Digital Certificate Generator", icon: "fas fa-certificate", desc: "Create digital certificates.", href: "digital-certificate.html" },
+                    { name: "Firewall Tester", icon: "fas fa-fire", desc: "Test firewall and port security.", href: "firewall-tester.html" },
+                    { name: "Privacy Policy Generator", icon: "fas fa-user-shield", desc: "Generate privacy policy for websites.", href: "privacy-policy-generator.html" }
                 ]
             },
             {
@@ -1801,39 +1786,38 @@
                 categoryDesc: "Data processing, analysis, and visualization tools.",
                 categoryClass: "data-tools",
                 tools: [
-                    { name: "CSV to JSON Converter", icon: "fas fa-file-csv", desc: "Convert CSV files to JSON format." },
-                    { name: "JSON to CSV Converter", icon: "fas fa-file-code", desc: "Convert JSON data to CSV." },
-                    { name: "Excel to PDF Converter", icon: "fas fa-file-excel", desc: "Convert Excel files to PDF." },
-                    { name: "Data Cleaner", icon: "fas fa-broom", desc: "Clean and preprocess data." },
-                    { name: "Chart Generator", icon: "fas fa-chart-bar", desc: "Create charts from data." },
-                    { name: "Data Sorter", icon: "fas fa-sort-amount-down", desc: "Sort and organize data." },
-                    { name: "Data Filter", icon: "fas fa-filter", desc: "Filter data based on criteria." },
-                    { name: "Random Data Generator", icon: "fas fa-random", desc: "Generate random test data." },
-                    { name: "XML to JSON Converter", icon: "fas fa-code", desc: "Convert XML to JSON format." },
-                    { name: "JSON to XML Converter", icon: "fas fa-file-code", desc: "Convert JSON to XML format." },
-                    { name: "Data Validator", icon: "fas fa-check-circle", desc: "Validate data formats and integrity." },
-                    { name: "Data Splitter", icon: "fas fa-cut", desc: "Split large datasets into smaller parts." }
+                    { name: "CSV to JSON Converter", icon: "fas fa-file-csv", desc: "Convert CSV files to JSON format.", href: "csv-to-json.html" },
+                    { name: "JSON to CSV Converter", icon: "fas fa-file-code", desc: "Convert JSON data to CSV.", href: "json-to-csv.html" },
+                    { name: "Excel to PDF Converter", icon: "fas fa-file-excel", desc: "Convert Excel files to PDF.", href: "excel-to-pdf.html" },
+                    { name: "Data Cleaner", icon: "fas fa-broom", desc: "Clean and preprocess data.", href: "data-cleaner.html" },
+                    { name: "Chart Generator", icon: "fas fa-chart-bar", desc: "Create charts from data.", href: "chart-generator.html" },
+                    { name: "Data Sorter", icon: "fas fa-sort-amount-down", desc: "Sort and organize data.", href: "data-sorter.html" },
+                    { name: "Data Filter", icon: "fas fa-filter", desc: "Filter data based on criteria.", href: "data-filter.html" },
+                    { name: "Random Data Generator", icon: "fas fa-random", desc: "Generate random test data.", href: "random-data.html" },
+                    { name: "XML to JSON Converter", icon: "fas fa-code", desc: "Convert XML to JSON format.", href: "xml-to-json.html" },
+                    { name: "JSON to XML Converter", icon: "fas fa-file-code", desc: "Convert JSON to XML format.", href: "json-to-xml.html" },
+                    { name: "Data Validator", icon: "fas fa-check-circle", desc: "Validate data formats and integrity.", href: "data-validator.html" },
+                    { name: "Data Splitter", icon: "fas fa-cut", desc: "Split large datasets into smaller parts.", href: "data-splitter.html" }
                 ]
             },
-            /* NEW CATEGORIES ADDED HERE */
             {
                 category: "Health & Fitness Tools",
                 icon: "fas fa-heartbeat",
                 categoryDesc: "Track your health, fitness, and wellness with our specialized tools.",
                 categoryClass: "health-tools",
                 tools: [
-                    { name: "Calorie Calculator", icon: "fas fa-apple-alt", desc: "Calculate daily calorie needs based on goals." },
-                    { name: "Workout Planner", icon: "fas fa-dumbbell", desc: "Create personalized workout routines." },
-                    { name: "Step Counter", icon: "fas fa-walking", desc: "Track steps and calculate distance walked." },
-                    { name: "Water Intake Tracker", icon: "fas fa-tint", desc: "Track daily water consumption goals." },
-                    { name: "Sleep Calculator", icon: "fas fa-bed", desc: "Calculate optimal sleep cycles and bedtime." },
-                    { name: "Body Fat Calculator", icon: "fas fa-weight", desc: "Calculate body fat percentage." },
-                    { name: "Heart Rate Calculator", icon: "fas fa-heart", desc: "Calculate target heart rate zones for exercise." },
-                    { name: "Pregnancy Calculator", icon: "fas fa-baby", desc: "Track pregnancy weeks and due date." },
-                    { name: "Macro Calculator", icon: "fas fa-utensils", desc: "Calculate macronutrient needs (carbs, protein, fat)." },
-                    { name: "Medication Reminder", icon: "fas fa-pills", desc: "Set reminders for medications and supplements." },
-                    { name: "Period Tracker", icon: "fas fa-calendar", desc: "Track menstrual cycle and ovulation." },
-                    { name: "Health Risk Assessment", icon: "fas fa-clipboard-check", desc: "Assess health risks based on lifestyle." }
+                    { name: "Calorie Calculator", icon: "fas fa-apple-alt", desc: "Calculate daily calorie needs based on goals.", href: "calorie-calculator.html" },
+                    { name: "Workout Planner", icon: "fas fa-dumbbell", desc: "Create personalized workout routines.", href: "workout-planner.html" },
+                    { name: "Step Counter", icon: "fas fa-walking", desc: "Track steps and calculate distance walked.", href: "step-counter.html" },
+                    { name: "Water Intake Tracker", icon: "fas fa-tint", desc: "Track daily water consumption goals.", href: "water-tracker.html" },
+                    { name: "Sleep Calculator", icon: "fas fa-bed", desc: "Calculate optimal sleep cycles and bedtime.", href: "sleep-calculator.html" },
+                    { name: "Body Fat Calculator", icon: "fas fa-weight", desc: "Calculate body fat percentage.", href: "body-fat-calculator.html" },
+                    { name: "Heart Rate Calculator", icon: "fas fa-heart", desc: "Calculate target heart rate zones for exercise.", href: "heart-rate-calculator.html" },
+                    { name: "Pregnancy Calculator", icon: "fas fa-baby", desc: "Track pregnancy weeks and due date.", href: "pregnancy-calculator.html" },
+                    { name: "Macro Calculator", icon: "fas fa-utensils", desc: "Calculate macronutrient needs (carbs, protein, fat).", href: "macro-calculator.html" },
+                    { name: "Medication Reminder", icon: "fas fa-pills", desc: "Set reminders for medications and supplements.", href: "medication-reminder.html" },
+                    { name: "Period Tracker", icon: "fas fa-calendar", desc: "Track menstrual cycle and ovulation.", href: "period-tracker.html" },
+                    { name: "Health Risk Assessment", icon: "fas fa-clipboard-check", desc: "Assess health risks based on lifestyle.", href: "health-assessment.html" }
                 ]
             },
             {
@@ -1842,18 +1826,18 @@
                 categoryDesc: "Learning aids, study tools, and educational resources for students and teachers.",
                 categoryClass: "education-tools",
                 tools: [
-                    { name: "Grade Calculator", icon: "fas fa-calculator", desc: "Calculate grades and GPA." },
-                    { name: "Flashcard Maker", icon: "fas fa-layer-group", desc: "Create digital flashcards for studying." },
-                    { name: "Citation Generator", icon: "fas fa-quote-right", desc: "Generate citations in APA, MLA, Chicago formats." },
-                    { name: "Plagiarism Checker", icon: "fas fa-search", desc: "Check text for plagiarism." },
-                    { name: "Essay Word Counter", icon: "fas fa-file-alt", desc: "Count words and check essay structure." },
-                    { name: "Math Problem Solver", icon: "fas fa-square-root-alt", desc: "Solve math problems step by step." },
-                    { name: "Language Translator", icon: "fas fa-language", desc: "Translate text between multiple languages." },
-                    { name: "Periodic Table", icon: "fas fa-atom", desc: "Interactive periodic table of elements." },
-                    { name: "Vocabulary Builder", icon: "fas fa-book", desc: "Learn new words with definitions and examples." },
-                    { name: "Study Timer", icon: "fas fa-clock", desc: "Pomodoro timer for focused study sessions." },
-                    { name: "Course Planner", icon: "fas fa-calendar-alt", desc: "Plan semester schedules and courses." },
-                    { name: "Equation Solver", icon: "fas fa-equals", desc: "Solve algebraic and calculus equations." }
+                    { name: "Grade Calculator", icon: "fas fa-calculator", desc: "Calculate grades and GPA.", href: "grade-calculator.html" },
+                    { name: "Flashcard Maker", icon: "fas fa-layer-group", desc: "Create digital flashcards for studying.", href: "flashcard-maker.html" },
+                    { name: "Citation Generator", icon: "fas fa-quote-right", desc: "Generate citations in APA, MLA, Chicago formats.", href: "citation-generator.html" },
+                    { name: "Plagiarism Checker", icon: "fas fa-search", desc: "Check text for plagiarism.", href: "plagiarism-checker.html" },
+                    { name: "Essay Word Counter", icon: "fas fa-file-alt", desc: "Count words and check essay structure.", href: "essay-word-counter.html" },
+                    { name: "Math Problem Solver", icon: "fas fa-square-root-alt", desc: "Solve math problems step by step.", href: "math-solver.html" },
+                    { name: "Language Translator", icon: "fas fa-language", desc: "Translate text between multiple languages.", href: "language-translator.html" },
+                    { name: "Periodic Table", icon: "fas fa-atom", desc: "Interactive periodic table of elements.", href: "periodic-table.html" },
+                    { name: "Vocabulary Builder", icon: "fas fa-book", desc: "Learn new words with definitions and examples.", href: "vocabulary-builder.html" },
+                    { name: "Study Timer", icon: "fas fa-clock", desc: "Pomodoro timer for focused study sessions.", href: "study-timer.html" },
+                    { name: "Course Planner", icon: "fas fa-calendar-alt", desc: "Plan semester schedules and courses.", href: "course-planner.html" },
+                    { name: "Equation Solver", icon: "fas fa-equals", desc: "Solve algebraic and calculus equations.", href: "equation-solver-edu.html" }
                 ]
             },
             {
@@ -1862,18 +1846,18 @@
                 categoryDesc: "Plan, budget, and organize your travels with our comprehensive travel tools.",
                 categoryClass: "travel-tools",
                 tools: [
-                    { name: "Flight Price Tracker", icon: "fas fa-plane-departure", desc: "Track flight prices and get alerts." },
-                    { name: "Trip Budget Calculator", icon: "fas fa-money-bill-wave", desc: "Calculate travel expenses and budget." },
-                    { name: "Packing List Generator", icon: "fas fa-suitcase", desc: "Create customized packing lists." },
-                    { name: "Currency Converter Pro", icon: "fas fa-exchange-alt", desc: "Convert currencies with live rates." },
-                    { name: "Time Zone Map", icon: "fas fa-globe-americas", desc: "Interactive world time zone map." },
-                    { name: "Mileage Calculator", icon: "fas fa-road", desc: "Calculate distance between locations." },
-                    { name: "Travel Itinerary Planner", icon: "fas fa-map-marked-alt", desc: "Plan daily travel itineraries." },
-                    { name: "Hotel Price Comparison", icon: "fas fa-hotel", desc: "Compare hotel prices across platforms." },
-                    { name: "Visa Requirement Checker", icon: "fas fa-passport", desc: "Check visa requirements by country." },
-                    { name: "Travel Expense Tracker", icon: "fas fa-receipt", desc: "Track travel expenses in real-time." },
-                    { name: "Weather Forecast", icon: "fas fa-cloud-sun", desc: "Get weather forecasts for destinations." },
-                    { name: "Language Phrasebook", icon: "fas fa-comments", desc: "Essential phrases for travelers." }
+                    { name: "Flight Price Tracker", icon: "fas fa-plane-departure", desc: "Track flight prices and get alerts.", href: "flight-tracker.html" },
+                    { name: "Trip Budget Calculator", icon: "fas fa-money-bill-wave", desc: "Calculate travel expenses and budget.", href: "trip-budget.html" },
+                    { name: "Packing List Generator", icon: "fas fa-suitcase", desc: "Create customized packing lists.", href: "packing-list.html" },
+                    { name: "Currency Converter Pro", icon: "fas fa-exchange-alt", desc: "Convert currencies with live rates.", href: "currency-converter-travel.html" },
+                    { name: "Time Zone Map", icon: "fas fa-globe-americas", desc: "Interactive world time zone map.", href: "timezone-map.html" },
+                    { name: "Mileage Calculator", icon: "fas fa-road", desc: "Calculate distance between locations.", href: "mileage-calculator.html" },
+                    { name: "Travel Itinerary Planner", icon: "fas fa-map-marked-alt", desc: "Plan daily travel itineraries.", href: "itinerary-planner.html" },
+                    { name: "Hotel Price Comparison", icon: "fas fa-hotel", desc: "Compare hotel prices across platforms.", href: "hotel-comparison.html" },
+                    { name: "Visa Requirement Checker", icon: "fas fa-passport", desc: "Check visa requirements by country.", href: "visa-checker.html" },
+                    { name: "Travel Expense Tracker", icon: "fas fa-receipt", desc: "Track travel expenses in real-time.", href: "travel-expense.html" },
+                    { name: "Weather Forecast", icon: "fas fa-cloud-sun", desc: "Get weather forecasts for destinations.", href: "weather-forecast.html" },
+                    { name: "Language Phrasebook", icon: "fas fa-comments", desc: "Essential phrases for travelers.", href: "phrasebook.html" }
                 ]
             },
             {
@@ -1882,18 +1866,18 @@
                 categoryDesc: "Recipe converters, nutrition calculators, and cooking assistants.",
                 categoryClass: "food-tools",
                 tools: [
-                    { name: "Recipe Scaler", icon: "fas fa-balance-scale", desc: "Scale recipes up or down for servings." },
-                    { name: "Unit Converter (Cooking)", icon: "fas fa-weight", desc: "Convert between cooking units (cups, grams, oz)." },
-                    { name: "Recipe Nutrition Calculator", icon: "fas fa-apple-alt", desc: "Calculate nutrition facts for recipes." },
-                    { name: "Meal Planner", icon: "fas fa-calendar", desc: "Plan weekly meals and generate shopping lists." },
-                    { name: "Wine Pairing Guide", icon: "fas fa-wine-glass-alt", desc: "Find perfect wine pairings for food." },
-                    { name: "Cooking Timer", icon: "fas fa-hourglass-half", desc: "Multiple timers for cooking tasks." },
-                    { name: "Recipe Calorie Counter", icon: "fas fa-fire", desc: "Count calories in homemade recipes." },
-                    { name: "Ingredient Substitution", icon: "fas fa-exchange-alt", desc: "Find substitutes for ingredients." },
-                    { name: "Baking Calculator", icon: "fas fa-bread-slice", desc: "Calculate baking measurements precisely." },
-                    { name: "Food Cost Calculator", icon: "fas fa-calculator", desc: "Calculate cost per serving of recipes." },
-                    { name: "Dietary Restriction Filter", icon: "fas fa-allergies", desc: "Filter recipes by dietary needs." },
-                    { name: "Cooking Temperature Chart", icon: "fas fa-thermometer-half", desc: "Reference for cooking temperatures." }
+                    { name: "Recipe Scaler", icon: "fas fa-balance-scale", desc: "Scale recipes up or down for servings.", href: "recipe-scaler.html" },
+                    { name: "Unit Converter (Cooking)", icon: "fas fa-weight", desc: "Convert between cooking units (cups, grams, oz).", href: "cooking-converter.html" },
+                    { name: "Recipe Nutrition Calculator", icon: "fas fa-apple-alt", desc: "Calculate nutrition facts for recipes.", href: "recipe-nutrition.html" },
+                    { name: "Meal Planner", icon: "fas fa-calendar", desc: "Plan weekly meals and generate shopping lists.", href: "meal-planner.html" },
+                    { name: "Wine Pairing Guide", icon: "fas fa-wine-glass-alt", desc: "Find perfect wine pairings for food.", href: "wine-pairing.html" },
+                    { name: "Cooking Timer", icon: "fas fa-hourglass-half", desc: "Multiple timers for cooking tasks.", href: "cooking-timer.html" },
+                    { name: "Recipe Calorie Counter", icon: "fas fa-fire", desc: "Count calories in homemade recipes.", href: "recipe-calorie.html" },
+                    { name: "Ingredient Substitution", icon: "fas fa-exchange-alt", desc: "Find substitutes for ingredients.", href: "ingredient-substitution.html" },
+                    { name: "Baking Calculator", icon: "fas fa-bread-slice", desc: "Calculate baking measurements precisely.", href: "baking-calculator.html" },
+                    { name: "Food Cost Calculator", icon: "fas fa-calculator", desc: "Calculate cost per serving of recipes.", href: "food-cost.html" },
+                    { name: "Dietary Restriction Filter", icon: "fas fa-allergies", desc: "Filter recipes by dietary needs.", href: "dietary-filter.html" },
+                    { name: "Cooking Temperature Chart", icon: "fas fa-thermometer-half", desc: "Reference for cooking temperatures.", href: "cooking-temperature.html" }
                 ]
             },
             {
@@ -1902,21 +1886,27 @@
                 categoryDesc: "Boost your efficiency, organization, and time management.",
                 categoryClass: "productivity-tools",
                 tools: [
-                    { name: "Pomodoro Timer", icon: "fas fa-clock", desc: "Timer for Pomodoro technique productivity." },
-                    { name: "Task Manager", icon: "fas fa-check-square", desc: "Create and manage to-do lists." },
-                    { name: "Goal Tracker", icon: "fas fa-bullseye", desc: "Set and track progress towards goals." },
-                    { name: "Time Tracker", icon: "fas fa-stopwatch", desc: "Track time spent on different activities." },
-                    { name: "Habit Tracker", icon: "fas fa-calendar-check", desc: "Build and track daily habits." },
-                    { name: "Project Planner", icon: "fas fa-project-diagram", desc: "Plan projects with timelines and milestones." },
-                    { name: "Meeting Cost Calculator", icon: "fas fa-users", desc: "Calculate cost of meetings based on salaries." },
-                    { name: "Email Template Manager", icon: "fas fa-envelope", desc: "Create and manage email templates." },
-                    { name: "Focus Timer", icon: "fas fa-brain", desc: "Timer for deep focus work sessions." },
-                    { name: "Decision Maker", icon: "fas fa-random", desc: "Make decisions with pros/cons lists." },
-                    { name: "Note Taker", icon: "fas fa-sticky-note", desc: "Take and organize notes efficiently." },
-                    { name: "Daily Planner", icon: "fas fa-calendar-day", desc: "Plan your day hour by hour." }
+                    { name: "Pomodoro Timer", icon: "fas fa-clock", desc: "Timer for Pomodoro technique productivity.", href: "pomodoro-timer.html" },
+                    { name: "Task Manager", icon: "fas fa-check-square", desc: "Create and manage to-do lists.", href: "task-manager.html" },
+                    { name: "Goal Tracker", icon: "fas fa-bullseye", desc: "Set and track progress towards goals.", href: "goal-tracker.html" },
+                    { name: "Time Tracker", icon: "fas fa-stopwatch", desc: "Track time spent on different activities.", href: "time-tracker.html" },
+                    { name: "Habit Tracker", icon: "fas fa-calendar-check", desc: "Build and track daily habits.", href: "habit-tracker.html" },
+                    { name: "Project Planner", icon: "fas fa-project-diagram", desc: "Plan projects with timelines and milestones.", href: "project-planner.html" },
+                    { name: "Meeting Cost Calculator", icon: "fas fa-users", desc: "Calculate cost of meetings based on salaries.", href: "meeting-cost.html" },
+                    { name: "Email Template Manager", icon: "fas fa-envelope", desc: "Create and manage email templates.", href: "email-templates.html" },
+                    { name: "Focus Timer", icon: "fas fa-brain", desc: "Timer for deep focus work sessions.", href: "focus-timer.html" },
+                    { name: "Decision Maker", icon: "fas fa-random", desc: "Make decisions with pros/cons lists.", href: "decision-maker.html" },
+                    { name: "Note Taker", icon: "fas fa-sticky-note", desc: "Take and organize notes efficiently.", href: "note-taker.html" },
+                    { name: "Daily Planner", icon: "fas fa-calendar-day", desc: "Plan your day hour by hour.", href: "daily-planner.html" }
                 ]
             }
         ];
+
+        // Tool URL Generator
+        function generateToolURL(toolName) {
+            // Simple URL generation from tool name
+            return toolName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '.html';
+        }
 
         // DOM Elements
         let toolsContainer = document.getElementById('toolsContainer');
@@ -1933,345 +1923,17 @@
         let chatbotInput = document.getElementById('chatbotInput');
         let chatbotSend = document.getElementById('chatbotSend');
 
-        // ===========================================
-        // AI CHATBOT - FULLY FUNCTIONAL ASSISTANT
-        // ===========================================
+        // Chatbot responses - Updated with new categories
         const chatbotResponses = {
-            greetings: {
-                en: ["Hello! 👋 I'm QSHUB Assistant. How can I help you today?", 
-                     "Hi there! Ready to explore QSHUB tools?", 
-                     "Welcome! I'm here to help with all your tool needs."],
-                hi: ["नमस्ते! 👋 मैं QSHUB Assistant हूं। आज मैं आपकी कैसे मदद कर सकता हूं?", 
-                     "हाय! QSHUB टूल्स एक्सप्लोर करने के लिए तैयार?", 
-                     "स्वागत है! मैं आपकी सभी टूल जरूरतों में मदद करने के लिए यहां हूं।"],
-                ur: ["السلام علیکم! 👋 میں QSHUB Assistant ہوں۔ آج میں آپ کی کس طرح مدد کر سکتا ہوں؟", 
-                     "ہیلو! QSHUB ٹولز کو دریافت کرنے کے لیے تیار ہیں؟", 
-                     "خوش آمدید! میں آپ کی تمام ٹول ضروریات میں مدد کے لیے یہاں ہوں۔"]
-            },
-            
-            help: {
-                en: ["I can help you with:\n• Explaining what each tool does\n• How to use specific tools\n• Why and when to use certain tools\n• Tool recommendations\n• Technical support\n• Website navigation\n\nWhat would you like to know?"],
-                hi: ["मैं आपकी मदद कर सकता हूं:\n• प्रत्येक टूल क्या करता है समझाने में\n• विशिष्ट टूल का उपयोग कैसे करें\n• किसी टूल का उपयोग क्यों और कब करें\n• टूल सिफारिशें\n• तकनीकी सहायता\n• वेबसाइट नेविगेशन\n\nआप क्या जानना चाहेंगे?"],
-                ur: ["میں آپ کی مدد کر سکتا ہوں:\n• ہر ٹول کیا کرتا ہے اس کی وضاحت کرنے میں\n• مخصوص ٹولز کا استعمال کیسے کریں\n• کسی ٹول کا استعمال کیوں اور کب کریں\n• ٹول کی سفارشات\n• تکنیکی مدد\n• ویب سائٹ نیویگیشن\n\nآپ کیا جاننا چاہیں گے؟"]
-            },
-            
-            thanks: {
-                en: ["You're welcome! 😊 Let me know if you need anything else.", 
-                     "Happy to help! 👍 Feel free to ask more questions.", 
-                     "Anytime! 😄 Just ask if you need assistance."],
-                hi: ["आपका स्वागत है! 😊 अगर आपको और कुछ चाहिए तो बताएं।", 
-                     "मदद करके खुशी हुई! 👍 और सवाल पूछने में संकोच न करें।", 
-                     "कभी भी! 😄 अगर आपको सहायता चाहिए तो बस पूछें।"],
-                ur: ["آپ کا شکریہ! 😊 اگر آپ کو اور کچھ چاہیے تو مجھے بتائیں۔", 
-                     "مدد کر کے خوشی ہوئی! 👍 مزید سوالات پوچھنے میں جھجک محسوس نہ کریں۔", 
-                     "کسی بھی وقت! 😄 اگر آپ کو مدد کی ضرورت ہو تو بس پوچھیں۔"]
-            },
-            
-            toolCategories: {
-                en: "📂 **Available Tool Categories:**\n\n1. **Text Tools** - Word counter, case converter, password generator\n2. **Calculator Tools** - Age calculator, BMI calculator, currency converter\n3. **Image Tools** - Resizer, converter, compressor, editor\n4. **Video Tools** - Converter, compressor, trimmer\n5. **Document Tools** - PDF tools, converter, merger\n6. **Web Tools** - Color picker, code formatter, validator\n7. **Utility Tools** - QR generator, unit converter, timer\n8. **Business Tools** - Invoice generator, tax calculator\n9. **Health Tools** - BMI calculator, calorie counter\n10. **Productivity Tools** - Timer, task manager\n\nWhich category interests you?",
-                hi: "📂 **उपलब्ध टूल श्रेणियाँ:**\n\n1. **टेक्स्ट टूल्स** - वर्ड काउंटर, केस कन्वर्टर, पासवर्ड जनरेटर\n2. **कैलकुलेटर टूल्स** - आयु कैलकुलेटर, BMI कैलकुलेटर, मुद्रा कनवर्टर\n3. **इमेज टूल्स** - रीसाइज़र, कन्वर्टर, कंप्रेसर, एडिटर\n4. **वीडियो टूल्स** - कन्वर्टर, कंप्रेसर, ट्रिमर\n5. **डॉक्यूमेंट टूल्स** - PDF टूल्स, कन्वर्टर, मर्जर\n6. **वेब टूल्स** - रंग पिकर, कोड फॉर्मेटर, वैलिडेटर\n7. **यूटिलिटी टूल्स** - QR जनरेटर, यूनिट कन्वर्टर, टाइमर\n8. **बिजनेस टूल्स** - इनवॉइस जनरेटर, टैक्स कैलकुलेटर\n9. **स्वास्थ्य टूल्स** - BMI कैलकुलेटर, कैलोरी काउंटर\n10. **प्रोडक्टिविटी टूल्स** - टाइमर, टास्क मैनेजर\n\nआपको कौन सी श्रेणी रुचिकर लगती है?",
-                ur: "📂 **دستیاب ٹول کیٹگریز:**\n\n1. **ٹیکسٹ ٹولز** - لفظ گنتی، کیس کنورٹر، پاس ورڈ جنریٹر\n2. **کیلکولیٹر ٹولز** - عمر کیلکولیٹر، BMI کیلکولیٹر، کرنسی کنورٹر\n3. **تصویری ٹولز** - سائز تبدیل کرنے والا، کنورٹر، کمپریسر، ایڈیٹر\n4. **ویڈیو ٹولز** - کنورٹر، کمپریسر، ٹرمر\n5. **دستاویز ٹولز** - PDF ٹولز، کنورٹر، مرجر\n6. **ویب ٹولز** - رنگ چننے والا، کوڈ فارمیٹر، توثیق کنندہ\n7. **یوٹیلیٹی ٹولز** - QR جنریٹر، یونٹ کنورٹر، ٹائمر\n8. **کاروباری ٹولز** - انوائس جنریٹر، ٹیکس کیلکولیٹر\n9. **صحت کے ٹولز** - BMI کیلکولیٹر، کیلوری کاؤنٹر\n10. **پروڈکٹیویٹی ٹولز** - ٹائمر، ٹاسک مینیجر\n\nآپ کو کون سی کیٹگری دلچسپ لگتی ہے؟"
-            },
-            
-            default: {
-                en: "I'm here to help you with QSHUB tools! 😊\n\nYou can ask me:\n• What does [tool name] do?\n• How to use [tool name]?\n• When should I use [tool name]?\n• Show me available tools\n• Help me with [specific task]\n\nWhat would you like to know?",
-                hi: "मैं QSHUB टूल्स में आपकी मदद करने के लिए यहां हूं! 😊\n\nआप मुझसे पूछ सकते हैं:\n• [टूल का नाम] क्या करता है?\n• [टूल का नाम] का उपयोग कैसे करें?\n• मुझे [टूल का नाम] कब उपयोग करना चाहिए?\n• मुझे उपलब्ध टूल दिखाएं\n• [विशिष्ट कार्य] में मेरी मदद करें\n\nआप क्या जानना चाहेंगे?",
-                ur: "میں QSHUB ٹولز میں آپ کی مدد کرنے کے لیے یہاں ہوں! 😊\n\nآپ مجھ سے پوچھ سکتے ہیں:\n• [ٹول کا نام] کیا کرتا ہے؟\n• [ٹول کا نام] کا استعمال کیسے کریں؟\n• مجھے [ٹول کا نام] کب استعمال کرنا چاہیے؟\n• مجھے دستیاب ٹولز دکھائیں\n• [مخصوص کام] میں میری مدد کریں\n\nآپ کیا جاننا چاہیں گے؟"
-            }
+            greetings: ["Hello! 👋 How can I assist you today?", "Hi there! Ready to explore QSHUB tools?", "Welcome! I'm here to help with all your tool needs."],
+            help: ["I can help you find tools, explain features, or answer questions about QSHUB. What would you like to know?"],
+            tools: ["We have tools in these categories: Image, Video, Document, Calculator, Text, Web, Color, Utility, Math, Business, Audio, Social, Security, Data, Health, Education, Travel, Food, and Productivity tools."],
+            video: ["Video tools include: Converter, Compressor, Trimmer, Merger, GIF Converter, and Speed Controller."],
+            image: ["Image tools include: Converter, Compressor, Resizer, Cropper, OCR, and Rotator/Flipper."],
+            contact: ["Contact us at: qshubofficial@gmail.com"],
+            thanks: ["You're welcome! 😊 Let me know if you need anything else."],
+            default: ["I'm still learning! Try asking about tools, features, or how to use QSHUB."]
         };
-
-        // Tool explanation database
-        const toolDatabase = {
-            // Text Tools
-            "word counter": {
-                what: "Counts words, characters, sentences, and paragraphs in text",
-                how: "Paste your text and click 'Count' button",
-                when: "When writing essays, articles, or checking text length",
-                why: "To meet word limits, analyze text, or check content length"
-            },
-            "password generator": {
-                what: "Creates strong random passwords with customizable options",
-                how: "Select length and character types, then generate",
-                when: "When creating new accounts or updating passwords",
-                why: "To enhance security and prevent hacking"
-            },
-            "text case converter": {
-                what: "Converts text between uppercase, lowercase, title case",
-                how: "Enter text and select conversion type",
-                when: "When formatting text for documents or websites",
-                why: "To maintain consistent text formatting"
-            },
-            
-            // Calculator Tools
-            "age calculator": {
-                what: "Calculates age in years, months, and days",
-                how: "Enter birth date and calculate",
-                when: "When you need to know exact age",
-                why: "For official documents, medical forms, or personal use"
-            },
-            "bmi calculator": {
-                what: "Calculates Body Mass Index based on height and weight",
-                how: "Enter height and weight in metric units",
-                when: "When assessing health and fitness levels",
-                why: "To determine healthy weight range"
-            },
-            "currency converter": {
-                what: "Converts between different world currencies",
-                how: "Enter amount and select currencies",
-                when: "When traveling or dealing with international transactions",
-                why: "To understand exchange rates and values"
-            },
-            
-            // Image Tools
-            "image resizer": {
-                what: "Changes image dimensions while maintaining quality",
-                how: "Upload image and set new dimensions",
-                when: "When images are too large for websites or social media",
-                why: "To reduce file size and optimize loading speed"
-            },
-            "image converter": {
-                what: "Converts between different image formats",
-                how: "Upload image and select target format",
-                when: "When you need specific image format for projects",
-                why: "Different formats have different uses (WebP for web, PNG for transparency)"
-            },
-            
-            // Video Tools
-            "video compressor": {
-                what: "Reduces video file size without significant quality loss",
-                how: "Upload video and select compression level",
-                when: "When videos are too large to share or upload",
-                why: "To save storage space and enable faster sharing"
-            },
-            "video converter": {
-                what: "Converts between different video formats",
-                how: "Upload video and select output format",
-                when: "When device or platform requires specific format",
-                why: "To ensure compatibility across devices"
-            },
-            
-            // Document Tools
-            "pdf merger": {
-                what: "Combines multiple PDF files into one document",
-                how: "Upload PDFs and arrange order, then merge",
-                when: "When you have related documents that should be together",
-                why: "To organize and share multiple documents as one file"
-            },
-            "pdf to word": {
-                what: "Converts PDF files to editable Word documents",
-                how: "Upload PDF and download converted Word file",
-                when: "When you need to edit content from a PDF",
-                why: "PDFs are not editable, Word documents are"
-            }
-        };
-
-        // Language detection function
-        function detectLanguage(text) {
-            const hindiRegex = /[\u0900-\u097F]/;
-            const urduRegex = /[\u0600-\u06FF]/;
-            
-            if (hindiRegex.test(text)) return 'hi';
-            if (urduRegex.test(text)) return 'ur';
-            return 'en';
-        }
-
-        // Initialize Chatbot
-        function initChatbot() {
-            // Toggle chatbot modal
-            chatbotToggle.addEventListener('click', function() {
-                chatbotModal.classList.toggle('active');
-                if (chatbotModal.classList.contains('active')) {
-                    chatbotInput.focus();
-                }
-            });
-            
-            // Close chatbot
-            chatbotClose.addEventListener('click', function() {
-                chatbotModal.classList.remove('active');
-            });
-            
-            // Send message on button click
-            chatbotSend.addEventListener('click', sendChatbotMessage);
-            
-            // Send message on Enter key
-            chatbotInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    sendChatbotMessage();
-                }
-            });
-        }
-        
-        // Send chatbot message
-        function sendChatbotMessage() {
-            const message = chatbotInput.value.trim();
-            
-            if (!message) return;
-            
-            // Add user message
-            addChatMessage(message, 'user');
-            chatbotInput.value = '';
-            
-            // Simulate thinking
-            chatbotSend.disabled = true;
-            chatbotSend.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-            
-            setTimeout(() => {
-                // Generate bot response
-                const response = generateChatbotResponse(message);
-                addChatMessage(response, 'bot');
-                
-                // Re-enable send button
-                chatbotSend.disabled = false;
-                chatbotSend.innerHTML = '<i class="fas fa-paper-plane"></i>';
-                
-                // Scroll to bottom
-                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-            }, 800);
-        }
-        
-        // Add chat message with typing animation
-        function addChatMessage(text, sender) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `chatbot-message ${sender}`;
-            
-            if (sender === 'bot') {
-                // Add typing indicator
-                messageDiv.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
-                chatbotMessages.appendChild(messageDiv);
-                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-                
-                // Simulate typing
-                setTimeout(() => {
-                    messageDiv.innerHTML = formatMessage(text);
-                    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-                }, 500);
-            } else {
-                messageDiv.textContent = text;
-                chatbotMessages.appendChild(messageDiv);
-                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-            }
-        }
-        
-        // Format message with line breaks
-        function formatMessage(text) {
-            return text.replace(/\n/g, '<br>');
-        }
-        
-        // Generate chatbot response
-        function generateChatbotResponse(message) {
-            const msg = message.toLowerCase();
-            const lang = detectLanguage(message);
-            
-            // Get random response from array
-            function getRandomResponse(responses) {
-                if (responses[lang]) {
-                    return responses[lang][Math.floor(Math.random() * responses[lang].length)];
-                }
-                return responses.en[Math.floor(Math.random() * responses.en.length)];
-            }
-            
-            // Greetings
-            if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey') || 
-                msg.includes('नमस्ते') || msg.includes('हाय') || msg.includes('السلام')) {
-                return getRandomResponse(chatbotResponses.greetings);
-            }
-            
-            // Thanks
-            if (msg.includes('thank') || msg.includes('thanks') || msg.includes('धन्यवाद') || msg.includes('शुक्रिया')) {
-                return getRandomResponse(chatbotResponses.thanks);
-            }
-            
-            // Help request
-            if (msg.includes('help') || msg.includes('मदद') || msg.includes('مدد')) {
-                return getRandomResponse(chatbotResponses.help);
-            }
-            
-            // Tool categories request
-            if (msg.includes('category') || msg.includes('categories') || msg.includes('tools') || 
-                msg.includes('टूल') || msg.includes('ٹولز') || msg.includes('available')) {
-                return chatbotResponses.toolCategories[lang] || chatbotResponses.toolCategories.en;
-            }
-            
-            // Tool explanation requests
-            const toolMatch = Object.keys(toolDatabase).find(tool => 
-                msg.includes(tool) || 
-                msg.includes(tool.replace(' ', '')) ||
-                (tool === 'word counter' && (msg.includes('word') || msg.includes('शब्द') || msg.includes('لفظ'))) ||
-                (tool === 'password generator' && (msg.includes('password') || msg.includes('पासवर्ड') || msg.includes('پاسورڈ')))
-            );
-            
-            if (toolMatch) {
-                const tool = toolDatabase[toolMatch];
-                let response = `🛠️ **${toolMatch.toUpperCase()}**\n\n`;
-                
-                if (msg.includes('what') || msg.includes('क्या') || msg.includes('کیا')) {
-                    response += `**What it does:** ${tool.what}\n\n`;
-                }
-                if (msg.includes('how') || msg.includes('कैसे') || msg.includes('کیسے')) {
-                    response += `**How to use:** ${tool.how}\n\n`;
-                }
-                if (msg.includes('when') || msg.includes('कब') || msg.includes('کب')) {
-                    response += `**When to use:** ${tool.when}\n\n`;
-                }
-                if (msg.includes('why') || msg.includes('क्यों') || msg.includes('کیوں')) {
-                    response += `**Why use it:** ${tool.why}\n\n`;
-                }
-                
-                // If no specific question, provide all information
-                if (!msg.includes('what') && !msg.includes('how') && !msg.includes('when') && !msg.includes('why') &&
-                    !msg.includes('क्या') && !msg.includes('कैसे') && !msg.includes('कब') && !msg.includes('क्यों') &&
-                    !msg.includes('کیا') && !msg.includes('کیسے') && !msg.includes('کب') && !msg.includes('کیوں')) {
-                    response = `🛠️ **${toolMatch.toUpperCase()}**\n\n` +
-                               `**What it does:** ${tool.what}\n\n` +
-                               `**How to use:** ${tool.how}\n\n` +
-                               `**When to use:** ${tool.when}\n\n` +
-                               `**Why use it:** ${tool.why}`;
-                }
-                
-                return response;
-            }
-            
-            // Specific tool questions
-            if (msg.includes('mean') || msg.includes('meaning') || msg.includes('मतलब') || msg.includes('معنی')) {
-                const tool = msg.replace(/mean|meaning|मतलब|معنی|does|do|क्या|کیا/gi, '').trim();
-                const foundTool = Object.keys(toolDatabase).find(t => 
-                    tool.includes(t) || t.includes(tool)
-                );
-                
-                if (foundTool) {
-                    const toolInfo = toolDatabase[foundTool];
-                    return `**${foundTool.toUpperCase()}** means:\n${toolInfo.what}\n\nIt's used ${toolInfo.when.toLowerCase()}`;
-                }
-            }
-            
-            // Tool recommendations
-            if (msg.includes('recommend') || msg.includes('suggest') || msg.includes('सुझाव') || msg.includes('تجویز')) {
-                if (msg.includes('text') || msg.includes('टेक्स्ट') || msg.includes('متن')) {
-                    return "For text editing, I recommend:\n• **Word Counter** - For counting words\n• **Case Converter** - For changing text case\n• **Password Generator** - For creating secure passwords";
-                }
-                if (msg.includes('image') || msg.includes('इमेज') || msg.includes('تصویر')) {
-                    return "For images, I recommend:\n• **Image Resizer** - For changing dimensions\n• **Image Converter** - For format conversion\n• **Image Compressor** - For reducing file size";
-                }
-                if (msg.includes('video') || msg.includes('वीडियो') || msg.includes('ویڈیو')) {
-                    return "For videos, I recommend:\n• **Video Compressor** - For reducing size\n• **Video Converter** - For format conversion\n• **Video Trimmer** - For cutting videos";
-                }
-                if (msg.includes('document') || msg.includes('डॉक्यूमेंट') || msg.includes('دستاویز')) {
-                    return "For documents, I recommend:\n• **PDF Merger** - For combining PDFs\n• **PDF to Word** - For editing PDFs\n• **PDF Compressor** - For reducing PDF size";
-                }
-            }
-            
-            // Website navigation
-            if (msg.includes('navigate') || msg.includes('find') || msg.includes('ढूंढें') || msg.includes('تلاش')) {
-                return "You can:\n1. Use the search bar at the top to find specific tools\n2. Browse categories in the Tools section\n3. Scroll through all available tools\n4. Ask me for specific tool locations";
-            }
-            
-            // Default response
-            return chatbotResponses.default[lang] || chatbotResponses.default.en;
-        }
-        
-        // ===========================================
-        // MAIN WEBSITE FUNCTIONS
-        // ===========================================
 
         // Initialize the page
         document.addEventListener('DOMContentLoaded', function() {
@@ -2311,15 +1973,6 @@
             
             // Initialize chatbot
             initChatbot();
-            
-            // Add welcome message to chatbot
-            setTimeout(() => {
-                if (!sessionStorage.getItem('chatbotWelcomed')) {
-                    const welcomeMsg = "👋 Welcome to QSHUB! I'm your AI assistant. I can help you understand tools, guide you on how to use them, and answer any questions. I understand English, Hindi, and Urdu! How can I assist you today?";
-                    addChatMessage(welcomeMsg, 'bot');
-                    sessionStorage.setItem('chatbotWelcomed', 'true');
-                }
-            }, 2000);
             
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2372,15 +2025,15 @@
                         </div>
                         <div class="tools-grid">
                             ${category.tools.map(tool => `
-                                <div class="tool-card" title="Click to learn more about ${tool.name}">
+                                <div class="tool-card" title="Click to use ${tool.name}">
                                     <div class="tool-icon">
                                         <i class="${tool.icon}"></i>
                                     </div>
                                     <h4 class="tool-name">${tool.name}</h4>
                                     <p class="tool-desc">${tool.desc}</p>
-                                    <button class="tool-button" data-tool="${tool.name}">
+                                    <a href="${tool.href || generateToolURL(tool.name)}" class="tool-button">
                                         Use Tool
-                                    </button>
+                                    </a>
                                 </div>
                             `).join('')}
                         </div>
@@ -2388,25 +2041,6 @@
                 `;
                 
                 toolsContainer.innerHTML += categoryHTML;
-            });
-            
-            // Add event listeners to tool buttons
-            document.querySelectorAll('.tool-button').forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    const toolName = this.getAttribute('data-tool');
-                    showToolComingSoon(toolName);
-                });
-            });
-            
-            // Add click events to whole tool cards
-            document.querySelectorAll('.tool-card').forEach(card => {
-                card.addEventListener('click', function(e) {
-                    if (!e.target.classList.contains('tool-button')) {
-                        const toolName = this.querySelector('.tool-name').textContent;
-                        showToolComingSoon(toolName);
-                    }
-                });
             });
         }
 
@@ -2442,48 +2076,138 @@
             displayTools(filteredData);
         }
 
-        // Show "coming soon" message for tools
-        function showToolComingSoon(toolName) {
-            // Remove existing modal if any
-            const existingModal = document.getElementById('comingSoonModal');
-            if (existingModal) {
-                existingModal.remove();
+        // Initialize Chatbot
+        function initChatbot() {
+            // Toggle chatbot modal
+            chatbotToggle.addEventListener('click', function() {
+                chatbotModal.classList.toggle('active');
+                if (chatbotModal.classList.contains('active')) {
+                    chatbotInput.focus();
+                }
+            });
+            
+            // Close chatbot
+            chatbotClose.addEventListener('click', function() {
+                chatbotModal.classList.remove('active');
+            });
+            
+            // Send message on button click
+            chatbotSend.addEventListener('click', sendChatbotMessage);
+            
+            // Send message on Enter key
+            chatbotInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendChatbotMessage();
+                }
+            });
+        }
+        
+        // Send chatbot message
+        function sendChatbotMessage() {
+            const message = chatbotInput.value.trim();
+            
+            if (!message) return;
+            
+            // Add user message
+            addChatMessage(message, 'user');
+            chatbotInput.value = '';
+            
+            // Simulate thinking delay
+            chatbotSend.disabled = true;
+            chatbotSend.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+            
+            setTimeout(() => {
+                // Generate bot response
+                const response = generateChatbotResponse(message);
+                addChatMessage(response, 'bot');
+                
+                // Re-enable send button
+                chatbotSend.disabled = false;
+                chatbotSend.innerHTML = '<i class="fas fa-paper-plane"></i>';
+                
+                // Scroll to bottom
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }, 800);
+        }
+        
+        // Add chat message
+        function addChatMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chatbot-message ${sender}`;
+            messageDiv.textContent = text;
+            chatbotMessages.appendChild(messageDiv);
+            
+            // Scroll to bottom
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+        
+        // Generate chatbot response
+        function generateChatbotResponse(message) {
+            const msg = message.toLowerCase();
+            
+            // Greetings
+            if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey')) {
+                return getRandomResponse(chatbotResponses.greetings);
             }
             
-            // Create new modal
-            const modalHTML = `
-                <div class="modal fade" id="comingSoonModal" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Coming Soon</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                            </div>
-                            <div class="modal-body text-center">
-                                <div style="width: 80px; height: 80px; background: var(--primary-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                                    <i class="fas fa-tools fa-2x text-white"></i>
-                                </div>
-                                <h4 class="mb-3">${toolName}</h4>
-                                <p class="mb-3">This tool is currently under development and will be available soon.</p>
-                                <div class="alert alert-info">
-                                    <i class="fas fa-info-circle me-2"></i>
-                                    <small>Check back later or <a href="mailto:qshubofficial@gmail.com" class="alert-link">contact us</a> for updates.</small>
-                                </div>
-                            </div>
-                            <div class="modal-footer justify-content-center">
-                                <button type="button" class="btn btn-primary px-4" data-bs-dismiss="modal">OK</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
+            // Thanks
+            if (msg.includes('thank') || msg.includes('thanks')) {
+                return getRandomResponse(chatbotResponses.thanks);
+            }
             
-            modalContainer.innerHTML = modalHTML;
+            // Help
+            if (msg.includes('help') || msg.includes('what can you do')) {
+                return getRandomResponse(chatbotResponses.help);
+            }
             
-            // Show the modal
-            const modalElement = document.getElementById('comingSoonModal');
-            const modal = new bootstrap.Modal(modalElement);
-            modal.show();
+            // Tools
+            if (msg.includes('tool') || msg.includes('available')) {
+                return getRandomResponse(chatbotResponses.tools);
+            }
+            
+            // Video tools
+            if (msg.includes('video')) {
+                return getRandomResponse(chatbotResponses.video);
+            }
+            
+            // Image tools
+            if (msg.includes('image')) {
+                return getRandomResponse(chatbotResponses.image);
+            }
+            
+            // Contact
+            if (msg.includes('contact') || msg.includes('email')) {
+                return getRandomResponse(chatbotResponses.contact);
+            }
+            
+            // New categories
+            if (msg.includes('health') || msg.includes('fitness')) {
+                return "We have Health & Fitness tools including Calorie Calculator, Workout Planner, Step Counter, Water Intake Tracker, Sleep Calculator, and more!";
+            }
+            
+            if (msg.includes('education') || msg.includes('study')) {
+                return "Education tools include Grade Calculator, Flashcard Maker, Citation Generator, Plagiarism Checker, Essay Word Counter, and more!";
+            }
+            
+            if (msg.includes('travel')) {
+                return "Travel tools include Flight Price Tracker, Trip Budget Calculator, Packing List Generator, Currency Converter, Time Zone Map, and more!";
+            }
+            
+            if (msg.includes('food') || msg.includes('cooking')) {
+                return "Food & Cooking tools include Recipe Scaler, Unit Converter, Recipe Nutrition Calculator, Meal Planner, Wine Pairing Guide, and more!";
+            }
+            
+            if (msg.includes('productivity')) {
+                return "Productivity tools include Pomodoro Timer, Task Manager, Goal Tracker, Time Tracker, Habit Tracker, and more!";
+            }
+            
+            // Default response
+            return getRandomResponse(chatbotResponses.default);
+        }
+        
+        // Get random response from array
+        function getRandomResponse(responses) {
+            return responses[Math.floor(Math.random() * responses.length)];
         }
     </script>
 </body>
